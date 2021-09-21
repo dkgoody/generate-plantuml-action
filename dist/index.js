@@ -32775,7 +32775,7 @@ function retrieveCodes(files) {
     }, []);
 }
 exports.retrieveCodes = retrieveCodes;
-const infoRegexp = /^plantuml(?:@(.+))? :([ \w\-_.]+)/;
+const infoRegexp = /^plantuml(?:@(.+))?(?: *: *([\w\-_.]+))?/;
 function puFromMd(markdown) {
     const md = new markdownit();
     const fences = md.parse(markdown, {})
