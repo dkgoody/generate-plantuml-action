@@ -29,6 +29,11 @@ const octokit = new github.GitHub(process.env.GITHUB_TOKEN);
 
 (async function main() {
     const payload = github.context.payload;
+
+    const str = JSON.stringify(payload,  null, ' ');
+
+    console.log(`Payload: ${str}`);
+
     const ref     = payload.ref;
     if (!payload.repository) {
         throw new Error();
